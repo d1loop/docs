@@ -26,23 +26,3 @@ When the app will be released, you can download the `app-release.apk` file from 
 
 #### iOS:
 Apple requires me to pay up for a developer account to let iOS users install this app too. In the next few months, iOS 17 is going to be out, and Apple should make it able to install external applications outside of the App Store so it won't require me to pay 99$\year just to release this app for iOS users.
-
-## Installing locally
-Once the repository will be updated with the first beta\release of d1loop, you can install the app locally by following the steps below:
-
-1. Cloning the repository:
-```bash
-git clone https://github.com/d1loop/app.git
-```
-2. Installing dependencies:
-```bash
-cd app
-npm install
-```
-3. Running app:
-```bash
-npm run start
-```
-
-4. Run the app on local device:
-Now you'll need to open the Expo Go app on your mobile device. You can lookup for the app in both Google Play Store and App Store to find that app. After installing this app you can scan the QR code that is in your terminal through the app. Read more about Expo Go [here](https://docs.expo.dev/get-started/expo-go/).

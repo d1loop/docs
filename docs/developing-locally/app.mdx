@@ -1,0 +1,44 @@
+---
+sidebar_position: 1
+---
+
+# Local app
+
+How to locally set up the app itself.
+
+### Forking the app
+
+First of all, you'll need to fork the app repository. Before that, let's make sure you have:
+- Git
+- Node.js
+- NPM (comes with the default installtion of Node)
+
+:::caution
+
+Please make sure to install any necessary tools from the list above (if you are missing one of them) before proceeding with the following steps.
+
+:::
+
+1. Run: 
+```bash
+git clone https://github.com/d1loop/app.git
+```
+2. Navigate to the cloned directory:
+```bash
+cd app
+```
+3. Install required modules:
+```bash
+npm install
+```
+
+### Running the app
+Now you'll need to open the Expo Go app on your mobile device. You can lookup for the app in both Google Play Store and App Store to find that app. Read more about Expo Go [here](https://docs.expo.dev/get-started/expo-go/).
+
+Now, run this command in your terminal:
+```bash
+npm run start
+```
+and you will see a QR code. In your mobile phone, enter the Expo Go app from the first step, use their QR code scanning feature and the app will load. Make sure that both your computer and mobile phone are connected to the same WiFi network.
+
+After connecting, you may not be fully in the app, and probably be stuck at the splash screen. This is because that you didn't setup yet your own database and API for the app. Those API and database are not connected to the Github repository source, and need to be setup and configured manaully.

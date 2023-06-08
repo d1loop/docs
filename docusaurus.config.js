@@ -29,7 +29,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-            'https://github.com/d1loop/docs',
+            'https://github.com/d1loop/docs/tree/main',
         },
         blog: false,
         theme: {
