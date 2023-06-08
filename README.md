@@ -1,19 +1,40 @@
-# Docusaurus 2
+# docs
+The docs for d1loop.
 
-This directory is a brief example of a [Docusaurus](https://v2.docusaurus.io) site that can be deployed to Vercel with zero configuration.
+# 🚨 Notice
+As the main app isn't done yet, the docs are too, and this is just the beginning of them. This is gonna take some time for me to finish these docs. If you have issues or questions currently feel free to open an issue for them until the docs will be done. If you have any suggestions about what should be added to the docs feel free to suggest it on the main repository.
 
-## Deploy Your Own
+# Info
+These docs are powered by [Meta's docusaurus 2](https://github.com/facebook/docusaurus) and Vercel.
 
-Deploy your own Docusaurus project with Vercel.
+## Deploying locally
+First of all, you will need to fork this project:
+```bash
+git clone https://github.com/d1loop/docs.git
+```
+After this, you'll need to run:
+```bash
+yarn
+```
+Or if you are using NPM:
+```bash
+npm install
+```
+After that, run:
+```bash
+yarn start
+```
+Or if you are using NPM:
+```bash
+npm run start
+```
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/docusaurus-2&template=docusaurus-2)
-
-_Live Example: https://docusaurus-2-template.vercel.app_
-
-### How We Created This Example
-
-To get started with Docusaurus on Vercel, you can use the [Docusaurus CLI](https://v2.docusaurus.io/docs/installation#scaffold-project-website) to initialize the project:
-
-```shell
-npx create-docusaurus@latest my-website classic
+## Building
+To build this, you'll need to run:
+```bash
+yarn build
+```
+Or if you are using NPM:
+```bash
+npm run build
 ```
