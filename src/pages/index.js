@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <Layout
       title={`${siteConfig.title} | By itsron`}
-      description="Anonymous social networking app.">
+      description="An social networking web-app.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

@@ -2,9 +2,9 @@
 sidebar_position: 1
 ---
 
-# Local app
+# Local web app
 
-How to locally set up the app itself.
+How to locally set up the web app.
 
 ### Forking the app
 
@@ -12,6 +12,8 @@ First of all, you'll need to fork the app repository. Before that, let's make su
 - Git
 - Node.js
 - NPM (comes with the default installtion of Node)
+
+You can use other package manager if you want to.
 
 :::caution
 
@@ -32,13 +34,60 @@ cd app
 npm install
 ```
 
-### Running the app
-Now you'll need to open the Expo Go app on your mobile device. You can lookup for the app in both Google Play Store and App Store to find that app. Read more about Expo Go [here](https://docs.expo.dev/get-started/expo-go/).
+### Configuration
+To make the web app working, we will need to configure some ENV values.
 
-Now, run this command in your terminal:
+To do that, we need to create a new file called `.env`. We can do that using (on Mac or Linux):
 ```bash
-npm run start
+touch .env
 ```
-and you will see a QR code. In your mobile phone, enter the Expo Go app from the first step, use their QR code scanning feature and the app will load. Make sure that both your computer and mobile phone are connected to the same WiFi network.
+Or you can just create the file in the current directory (on Windows).
 
-After connecting, you may not be fully in the app, and probably be stuck at the splash screen. This is because that you didn't setup yet your own [database and API](https://d1loop.vercel.app/docs/developing-locally/database-and-api) for the app. Those API and database are not connected to the Github repository source, and need to be setup and configured _manaully_.
+Now, you'll need to go to Firebase, create a project and when you select the platform of your app choose web,
+and enable the following options in your Firebase project:
+- Authentication: This enables the Google sign-in method for the app.
+- Cloud Firestore: The database we will be using.
+- Cloud Storage: The storage bucket for the images.
+
+After that, open the file with your code editor (or through the terminal), and set the following keys:
+```env
+NEXT_PUBLIC_API_KEY=The pubilc API key is here
+NEXT_PUBLIC_AUTH_DOMAIN=The pubilc auth domain
+NEXT_PUBLIC_PROJECT_ID=The public project ID
+NEXT_PUBLIC_STORAGE_BUCKET=The public storage bucket
+NEXT_PUBLIC_MESSAGING_SENDER_ID=The public message sender ID
+NEXT_PUBLIC_APP_ID=The public app ID
+NEXT_PUBLIC_MEASUREMENT_ID=The public measurement ID
+```
+Set these keys based on the configuration you got in the Firebase. To find your configuration you can go to 
+Project overview > Settings icon > Project settings > And scroll down to the part of the web app.
+
+After this configuration, you will need to run:
+```bash
+npm i -g firebase-tools
+```
+When this is installed, run:
+```bash
+firebase login
+```
+And complete the login through the pop-up window.
+
+Now, run this command:
+```bash
+firebase projects:list
+```
+And find the project ID of the current project. Once found, run this command:
+```bash
+firebase use your-project-id
+```
+And replace the "your-project-id" with the project ID. Now, run this command:
+```bash
+firebase deploy --except functions
+```
+And you will finish the setup of the database.
+
+Once all that done, run this command:
+```bash
+npm run dev
+```
+and you can enter the web app locally using "localhost" in your browser.

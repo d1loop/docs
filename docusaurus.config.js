@@ -90,6 +90,14 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      announcementBar: {
+        id: 'new_version',
+        content:
+          'The brand new (and first) version of d1loop is now live! <a target="https://d1loop.vercel.app" rel="noopener noreferrer" href="#">Visit it</a>',
+        backgroundColor: '#fafbfc',
+        textColor: '#091E42',
+        isCloseable: false,
+      },
     }),
 };
 

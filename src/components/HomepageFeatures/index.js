@@ -4,10 +4,10 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Anonymous',
+    title: 'Free',
     description: (
       <>
-        When using d1loop, you can stay totally anonymous like every other user.
+        d1loop is free to use, without any limits like Twitter.
       </>
     ),
   },
@@ -15,9 +15,17 @@ const FeatureList = [
     title: 'Open-source',
     description: (
       <>
-        All of the app files are open-sourced on our repository, so you can fork and try d1loop locally.
+        All of the web-app files are open-sourced on our repository, so you can fork and try d1loop locally.
       </>
     ),
+  },
+  {
+    title: 'Easy to use',
+    description: (
+      <>
+        Our goal is to give the best UX\UI that will be similar to other known platforms.
+      </>
+    )
   },
 ];
 
